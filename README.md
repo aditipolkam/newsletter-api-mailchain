@@ -30,7 +30,11 @@ please make sure to have copied the key associated with the account you used to 
 newsletters are mapped uniquely to a mailchain user address and hence `id` here specifies the newsletter creator's mailchain address, for eg: aditipolkam@mailchain.com
 
 1. newsletter details: GET - /get-newsletter/:id
+
+sample request api- https://newsletter-api-mailchain.onrender.com/get-newsletter/aditipolkam@mailchain.com   
+
 ```shell
+
 //response object example
 {
     "id": "aditipolkam@mailchain.com", //string
@@ -69,9 +73,17 @@ fetch(url,{
     }
 })
 
-//example response
-
 ```
+
+Status Codes:
+
+200 - Ok. Subscribed successfully
+
+201 - Already subscribed
+
+400 - Possibly an unvalid email provided
+
+404 - Newsletter doesn't exist
 
 
 4. send newsletter: POST - /send-newsletter/
@@ -91,5 +103,24 @@ fetch(url,{
     }
 })
 
+```
 
+Status Codes:
+400 - Bad Request, authorization header or x-mailchain-messaging-key header not set
+401 - Unauthorized auth token
+404 - No such newsletter
+201 - Newsletter sent successfully
+
+## Development 
+
+
+Installation
+```shell
+git glone https://github.com/aditipolkam/newsletter-api-mailchain
+npm install
+```
+
+Run
+```shell
+node app.js
 ```
