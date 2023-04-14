@@ -22,6 +22,36 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.submit-btn {
+  display: block;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 3px;
+  background: #d83f45;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.details {
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+input {
+  padding: 5px;
+  margin: 2px;
+  width: 100%;
+}
+
 body {
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4em;

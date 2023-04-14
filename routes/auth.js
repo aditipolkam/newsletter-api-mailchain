@@ -56,13 +56,14 @@ passport.use(
       var msg = {
         to: [createMailchainAddress(user.mailchain_address)],
         from: sender.address,
-        subject: "Sign in to Todos",
+        subject: "Sign in to Newsmail",
         content: {
           text:
-            "Hello! Click the link below to finish signing in to Todos.\r\n\r\n" +
-            link,
+            "Hello! Click the link below to finish signing in to NewsMail.\r\n\r\n" +
+            link +
+            "\r\n\r\n Copy your auth token from the dashboard which will open, use it in requests from your customized UI and get started with NewsMail handling your newsletters.",
           html:
-            '<h3>Hello!</h3><p>Click the link below to finish signing in to Todos.</p><p><a href="' +
+            '<h3>Hello!</h3><p>Click the link below to finish signing in to NewsMail.</p><p><a href="' +
             link +
             '">Sign in</a></p>',
         },

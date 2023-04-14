@@ -20,15 +20,16 @@
 					</li>
 				</ul>
 			</nav>
-			<%= console.log(user) %>
-			<p>Auth token: <%= auth_token %></p>
-			<form action="/" method="post">
-				<input type="text"  name="title" placeholder="What should we call your newsletter?" autofocus>
-				<input type="text" name="desc" placeholder="What is it about?"/>
-				<input type="hidden" name="user" value="<%= user.name || user.username || user.email || user.mailchain_address %>" >
-				<button type="submit">Submit</button>
-		
-			</form>
+	
+			<div class="details">
+				<p>Auth token: <%= auth_token %></p>
+				<form action="/" method="post">
+					<input type="text"  name="title" placeholder="What should we call your newsletter?" autofocus>
+					<input type="text" name="desc" placeholder="What is it about?"/>
+					<input type="hidden" name="user" value="<%= user.name || user.username || user.email || user.mailchain_address %>" >
+					<button type="submit" class="submit-btn">Submit</button>
+				</form>
+			</div>
 		</section>
 		<footer class="info">
 	
