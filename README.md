@@ -111,6 +111,11 @@ Status Codes:
 404 - No such newsletter
 201 - Newsletter sent successfully
 
+Result:
+subscriber inbox page - with received mail 
+![subscriber inbox page](./public/doc/newsletter.png)
+
+
 ## Development 
 
 
