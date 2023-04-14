@@ -5,6 +5,11 @@ var cookieParser = require("cookie-parser");
 var session = require("express-session");
 var passport = require("passport");
 var http = require("http");
+
+var authRouter = require("./routes/auth");
+var indexRouter = require("./routes/index");
+var newsletterRouter = require("./routes/newsletter");
+
 const port = process.env.PORT || 3000;
 const app = express();
 
@@ -20,6 +25,10 @@ app.use(
   })
 );
 app.use(passport.authenticate("session"));
+
+app.use("/", authRouter);
+app.use("/", indexRouter);
+app.use("/", newsletterRouter);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
