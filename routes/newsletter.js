@@ -72,7 +72,7 @@ router.post("/subscribe-newsletter/:id", async (req, res) => {
   } else {
     const { subscribers } = docSnap.data();
     if (subscribers.includes(mail)) {
-      res.status(400).json({
+      res.status(201).json({
         message:
           "This address has already subscribed to the requested newsletter",
       });
