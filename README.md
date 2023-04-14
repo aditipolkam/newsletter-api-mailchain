@@ -4,8 +4,26 @@ Customize your newsletter UI as you want, however you want!
 
 This service will handle all the logic, from creating your newsletter, to sending your updates to the subscriber base.
 
-Server URL - `https://newsletter-api-mailchain.onrender.com`
+Server Base and Dashboard URL - [`https://newsletter-api-mailchain.onrender.com`](https://newsletter-api-mailchain.onrender.com)
 
+### To get started: 
+log in to the dashboard to create your newsletter
+![home page](./public/doc/home.png)
+
+enter your mailchain address
+![login page](./public/doc/login.png)
+
+open your mailchain inbox and click on the link to sign in
+![inbox page](./public/doc/inbox.png)
+
+after verfication, your dashboard will showup
+copy your auth token and save it for sending requests
+enter your newsletter name and desc - click submit to create your newsletter
+![dashboard page](./public/doc/dashboard.png)
+
+your mailchain address's messaging_key can be found here after clicking settings on the left tab
+please make sure to have copied the key associated with the account you used to log into the dashboard
+![messaging key](./public/doc/messaging_key.png)
 
 ### API endpoints
 
@@ -67,7 +85,9 @@ fetch(url,{
         x-mailchain-messaging-key: <YOUR_MAILCHAIN_ACCOUNT_MESSAGING_KEY>
     },
     body:{
-        mail:"raprocks@mailchain.com"
+        subject:"Welcome",
+        title:"Appreciation for support",
+        content:"<p>Hello Mailchain User, thank you for subscribing! 👋</p>"
     }
 })
 
