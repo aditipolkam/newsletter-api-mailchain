@@ -107,9 +107,13 @@ fetch(url,{
 
 Status Codes:
 400 - Bad Request, authorization header or x-mailchain-messaging-key header not set
+
 401 - Unauthorized auth token
+
 404 - No such newsletter
+
 201 - Newsletter sent successfully
+
 
 Result:
 subscriber inbox page - with received mail 
